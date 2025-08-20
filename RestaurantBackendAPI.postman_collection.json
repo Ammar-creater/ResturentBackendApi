@@ -1,0 +1,714 @@
+{
+	"info": {
+		"_postman_id": "01b3d537-ebc9-423e-ac7b-35c549583ce5",
+		"name": "Restaurant Backend API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47150958",
+		"_collection_link": "https://ammar-creater-5014940.postman.co/workspace/M.AMMAR's-Workspace~e7748163-e22f-45c7-86d2-ec90c57fe540/collection/47150958-01b3d537-ebc9-423e-ac7b-35c549583ce5?action=share&source=collection_link&creator=47150958"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ammar\",\r\n    \"email\":\"ammar12@ammar\",\r\n    \"password\":\"11223344\",\r\n    \"phone\":\"0394042423\",\r\n    \"address\":[\"chichawatni\",\"sahiwal\"],\r\n    \"answer\":\"Pubg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ammar12@ammar\",\r\n    \"password\":\"11223344\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWIwOThmODRmMjEwN2Y0MTNhYjI4ZiIsImlhdCI6MTc1NTIzMTYzOX0.i9idCRtaq63CWOsoPKox2z1qpq2hZfbIoaqj2JvTc6s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/getuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getuser"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWIwOThmODRmMjEwN2Y0MTNhYjI4ZiIsImlhdCI6MTc1NTIzMTYzOX0.i9idCRtaq63CWOsoPKox2z1qpq2hZfbIoaqj2JvTc6s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"email\":\"ammar12@ammar\",\r\n    \"answer\":\"Pubg\",\r\n    \"username\": \"ammarhun\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWIwOThmODRmMjEwN2Y0MTNhYjI4ZiIsImlhdCI6MTc1NTIzMTYzOX0.i9idCRtaq63CWOsoPKox2z1qpq2hZfbIoaqj2JvTc6s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"12345678910\",\r\n    \"email\":\"ammar1@ammar\",\r\n    \"answer\":\"Pubg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/resetpassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"resetpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Profile",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWIwOThmODRmMjEwN2Y0MTNhYjI4ZiIsImlhdCI6MTc1NTIzMTYzOX0.i9idCRtaq63CWOsoPKox2z1qpq2hZfbIoaqj2JvTc6s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/deleteUser/689b098f84f2107f413ab28f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"deleteUser",
+								"689b098f84f2107f413ab28f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resturent",
+			"item": [
+				{
+					"name": "Create Resturent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTIzNTM3Nn0.c5m9_C4hOOEd7TwoMLOITgW7llkpWbn3lXFjxGGQ4K0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"pizza hut\",\r\n    \"imageUrl\":\"https://cdn.dribbble.com/userupload/23358986/file/original-c7bd8716c5016878198637278f020bb0.jpg?resize=400x0\",\r\n    \"foods\":[{\r\n        \"dishname\":\"Chicken Pizza\",\r\n        \"dishpic\":\"https://cdn.dribbble.com/userupload/23358986/file/original-c7bd8716c5016878198637278f020bb0.jpg?resize=400x0\",\r\n        \"price\":\"5$\"\r\n    }],\r\n    \"coords\":{\r\n      \"id\":\"12345\",\r\n      \"latitude\":\"123\",\r\n      \"latitudeDelta\":\"32\",\r\n      \"longitute\":\"321\",\r\n      \"longituteDelta\":\"3213\",\r\n      \"address\":\"Pakistan,Punjab,chichawatni\"\r\n    \r\n    }\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/resturent/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"resturent",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Resturents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/resturent/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"resturent",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resturent By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/resturent/get/689ec61c25b56718218168da",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"resturent",
+								"get",
+								"689ec61c25b56718218168da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Resturent",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTI1MzI1N30.-MDIH9BD82BWXhoJtzMFhCfVK_DpG8013tPUXoH3ZEg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/resturent/delete/689ec61c25b56718218168da",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"resturent",
+								"delete",
+								"689ec61c25b56718218168da"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTI1MzI1N30.-MDIH9BD82BWXhoJtzMFhCfVK_DpG8013tPUXoH3ZEg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"fast-food\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTI1MzI1N30.-MDIH9BD82BWXhoJtzMFhCfVK_DpG8013tPUXoH3ZEg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Catergory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTMyMTY3N30.CH0YiBm3xYsJ3_7DjWCI4KSDphSOWoDVRt41pP_lbDw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"burger-cheese\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category/update/689f406944a7bb7a1f5a72b0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"update",
+								"689f406944a7bb7a1f5a72b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTMyMzMzNn0.a3yVIl1NKRhwzuktepxmr71etrsQawLDS3OToZYEylo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category/delete/689f406944a7bb7a1f5a72b0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"delete",
+								"689f406944a7bb7a1f5a72b0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Food",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Ice Cream\",\r\n    \"discription\":\"waleena falvor ice cream\",\r\n    \"price\":\"400\",\r\n    \"resturent\":\"Chicken-burger\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/food/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Food",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTMzOTE4OX0.oTNvy2bYQju0_xneik57uSa_FJ8nrxS0lx1cm9e7DMo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Ice Cream\",\r\n    \"discription\":\"waleena falvor ice cream\",\r\n    \"price\":\"400\",\r\n    \"resturent\":\"Chicken-burger\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/food/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Food by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTMzOTE4OX0.oTNvy2bYQju0_xneik57uSa_FJ8nrxS0lx1cm9e7DMo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/food/getfood/68a05ad01bac73eee370333a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"getfood",
+								"68a05ad01bac73eee370333a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Food by Resturent",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTMzOTE4OX0.oTNvy2bYQju0_xneik57uSa_FJ8nrxS0lx1cm9e7DMo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/food/getfoodbyresturent/68a1795906d7e8060b6fd764",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"getfoodbyresturent",
+								"68a1795906d7e8060b6fd764"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Food",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTQ5NDYxOH0.8oHyskrsOU7ZVmKHC8vd23WW9EZllnpUFU4MAk3BF9Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Ice Cream Chocolate flavour\",\r\n    \"discription\":\"Chocolate falvor ice cream\",\r\n    \"price\":\"350\",\r\n    \"resturent\":\"68a00f3040d62af7a4e88e79\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/food/update/68a05ad01bac73eee370333a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"update",
+								"68a05ad01bac73eee370333a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Food",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTQ5NDYxOH0.8oHyskrsOU7ZVmKHC8vd23WW9EZllnpUFU4MAk3BF9Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/food/delete/68a05ad01bac73eee370333a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"delete",
+								"68a05ad01bac73eee370333a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "place order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWVjNDI1MjViNTY3MTgyMTgxNjhkNyIsImlhdCI6MTc1NTQ5NDYxOH0.8oHyskrsOU7ZVmKHC8vd23WW9EZllnpUFU4MAk3BF9Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/food/placeorder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"food",
+								"placeorder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
